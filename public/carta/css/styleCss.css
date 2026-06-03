@@ -1,0 +1,70 @@
+/* ========================================
+    CSS PARA EL HTML DE LA CARTA
+======================================== */
+
+#container-platos{
+    margin: 10px auto;
+    max-width: 1100px;
+}
+
+#container-platos h2{
+    color: var(--color-texto-destacado);
+    font-size: var(--txt-titulo);
+    font-family: var(--fuente-titulo);
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.card-menu{
+    border-radius: 16px;
+    background-color: var(--color-fondo-secundario);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.informacion-plato{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--color-titulos);
+}
+
+.informacion-plato p{
+    color: var(--color-texto-normal);
+}
+
+.precio-plato{
+    display: flex;
+}
+
+.precio-plato span{
+    color: var(--color-texto-destacado);
+    font-size: var(--txt-medio);
+}
+
+.linea-punteada{
+    margin: 10px 10px;
+    border-bottom: 5px dotted var(--color-texto-normal);
+    /*border-bottom: 5px dotted var(--color-texto-destacado);*/
+    width: 100%
+}
+
+
+@media (max-width: 600px) {
+    .card-menu{
+        flex-direction: column;
+    }
+
+    .precio-plato{
+        flex-direction: column;
+    }
+
+    .linea-punteada{
+        margin-top: 20px;
+        border-bottom: hidden;
+    }
+}

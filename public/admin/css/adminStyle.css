@@ -1,0 +1,311 @@
+/* ========================================
+    RESET Y VARIABLES
+======================================== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-fondo: #111111;
+    --color-fondo-secundario: #1b1b1b;
+    --color-titulos: #f5f5f5;
+    --color-texto: #cfcfcf;
+    --color-destacado: #c8a96b;
+    --color-marca: #5b1e28;
+    --color-marca-hover: #6F2532;
+    --color-exito: #4caf50;
+    --color-error: #e53935;
+    --color-editar: #c8a96b;
+    --color-borrar: #5b1e28;
+
+    --fuente-titulo: "Playfair Display", serif;
+    --fuente-cuerpo: "Inter", sans-serif;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-cuerpo);
+    min-height: 100vh;
+}
+
+.oculto {
+    display: none !important;
+}
+
+/* ========================================
+    LOGIN
+======================================== */
+#pantalla-login {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background-color: var(--color-fondo-secundario);
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid var(--color-marca);
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-box h1 {
+    font-family: var(--fuente-titulo);
+    color: var(--color-destacado);
+    font-size: 28px;
+}
+
+.login-box p {
+    color: var(--color-texto);
+    margin-top: -15px;
+    font-size: 14px;
+}
+
+/* ========================================
+    FORMULARIOS
+======================================== */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: var(--color-texto);
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="number"] {
+    height: 38px;
+    padding: 0 10px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background-color: #222;
+    color: var(--color-titulos);
+    font-size: 14px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.form-group input:focus {
+    border-color: var(--color-destacado);
+}
+
+.form-check {
+    flex-direction: row;
+    gap: 20px;
+}
+
+.form-check label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: var(--fuente-cuerpo);
+    transition: background-color 0.2s;
+}
+
+#btn-login, #btn-guardar {
+    background-color: var(--color-marca);
+    color: var(--color-titulos);
+    width: 100%;
+}
+
+#btn-login:hover, #btn-guardar:hover {
+    background-color: var(--color-marca-hover);
+}
+
+#btn-cancelar {
+    background-color: #333;
+    color: var(--color-texto);
+    width: 100%;
+}
+
+#btn-cancelar:hover {
+    background-color: #444;
+}
+
+.form-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.error-msg {
+    color: var(--color-error);
+    font-size: 13px;
+    min-height: 18px;
+}
+
+.exito-msg {
+    color: var(--color-exito);
+    font-size: 13px;
+    min-height: 18px;
+}
+
+/* ========================================
+    HEADER ADMIN
+======================================== */
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--color-fondo-secundario);
+    border-bottom: 1.5px solid var(--color-destacado);
+}
+
+.admin-header h1 {
+    font-family: var(--fuente-titulo);
+    color: var(--color-destacado);
+    font-size: 24px;
+}
+
+#btn-logout {
+    background-color: transparent;
+    color: var(--color-texto);
+    border: 1px solid #444;
+    padding: 8px 16px;
+}
+
+#btn-logout:hover {
+    background-color: #333;
+}
+
+/* ========================================
+    PANEL PRINCIPAL
+======================================== */
+.admin-main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.admin-card {
+    background-color: var(--color-fondo-secundario);
+    border-radius: 16px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.admin-card h2 {
+    font-family: var(--fuente-titulo);
+    color: var(--color-destacado);
+    font-size: 20px;
+}
+
+/* ========================================
+    LISTA DE PLATOS
+======================================== */
+.plato-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: var(--color-fondo);
+    border-radius: 8px;
+    gap: 10px;
+}
+
+.plato-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.plato-item-info strong {
+    color: var(--color-titulos);
+    font-size: 15px;
+}
+
+.plato-item-info span {
+    color: var(--color-destacado);
+    font-size: 13px;
+}
+
+.plato-item-info small {
+    color: #666;
+    font-size: 12px;
+}
+
+.plato-item-btns {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.btn-editar {
+    background-color: transparent;
+    border: 1px solid var(--color-editar);
+    color: var(--color-editar);
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+.btn-editar:hover {
+    background-color: var(--color-editar);
+    color: #111;
+}
+
+.btn-borrar {
+    background-color: transparent;
+    border: 1px solid var(--color-borrar);
+    color: #e57373;
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+.btn-borrar:hover {
+    background-color: var(--color-borrar);
+    color: var(--color-titulos);
+}
+
+/* ========================================
+    MEDIA QUERIES
+======================================== */
+@media (max-width: 600px) {
+    .admin-header {
+        padding: 15px 20px;
+    }
+
+    .admin-main {
+        padding: 20px 15px;
+    }
+
+    .plato-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .plato-item-btns {
+        width: 100%;
+    }
+
+    .btn-editar, .btn-borrar {
+        flex: 1;
+        text-align: center;
+    }
+}
