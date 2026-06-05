@@ -14,3 +14,10 @@ window.addEventListener("scroll", () => {
 
     scrollAnterior = scrollActual;
 });
+
+// Cuando se toca cualquier link del menú, desmarcamos el checkbox
+document.querySelectorAll(".list-nav .element a").forEach(link => {
+    link.addEventListener("click", () => {
+        document.getElementById("menu-hamburger").checked = false;
+    });
+});

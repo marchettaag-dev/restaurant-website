@@ -49,22 +49,30 @@
 .linea-punteada{
     margin: 10px 10px;
     border-bottom: 5px dotted var(--color-texto-normal);
-    /*border-bottom: 5px dotted var(--color-texto-destacado);*/
     width: 100%
 }
 
 
 @media (max-width: 600px) {
     .card-menu{
-        flex-direction: column;
+        font-size: small;
     }
 
     .precio-plato{
         flex-direction: column;
     }
 
+    .informacion-plato{
+        width: 180%;
+    }
+
     .linea-punteada{
         margin-top: 20px;
-        border-bottom: hidden;
+        border-bottom: 4px dotted var(--color-texto-normal);
     }
+
+    /* .linea-punteada{
+        margin-top: 20px;
+        border-bottom: hidden;
+    } */
 }

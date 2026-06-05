@@ -40,6 +40,7 @@
     --txt-titulo: 32px;
     --txt-medio: 20px;
     --txt-normal: 16px;
+    --txt-chico: 11px;
 }
 
 /* ========================================
@@ -145,6 +146,32 @@ header{
 
 .element:hover {
     background-color: #333;
+}
+
+/*     Menu Hamburgesa    */
+
+/* Ocultamos el checkbox real */
+#menu-hamburger {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+}
+
+#menu-hamburger:checked ~ .list-nav {
+    display: flex;
+    flex-direction: column;      /* items uno abajo del otro */
+    position: absolute;          /* se superpone al contenido */
+    top: 60px;                   /* justo debajo del header */
+    right: 0;
+    background-color: var(--color-fondo-secundario);
+    width: 200px;
+    padding: 15px;
+    gap: 10px;
+    border-radius: 0 0 0 12px;
+    border-left: 1px solid var(--color-texto-destacado);
+    border-bottom: 1px solid var(--color-texto-destacado);
 }
     
 /* ========================================
@@ -487,9 +514,32 @@ header{
         padding: 0 15px;
     }
 
+    /* Mostramos el botón hamburguesa */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 28px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    /* Las tres rayitas */
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: var(--color-titulos);
+        border-radius: 3px;
+    }
+
     .list-nav {
-        gap: 10px;
-        font-size: 14px;
+        display: none;
+    }
+
+    /* Cuando el checkbox está marcado, la lista aparece */
+    #menu-hamburger:checked ~ .list-nav {
+        display: flex;
     }
 
     .hero-txt p {
